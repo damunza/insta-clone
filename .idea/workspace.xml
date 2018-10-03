@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f98d955-82a3-400b-8e5c-8b56734f4a43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +42,7 @@
         <counts>
           <entry key="gitignore" value="18" />
           <entry key="html" value="11" />
-          <entry key="py" value="459" />
+          <entry key="py" value="631" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -54,7 +50,7 @@
         <counts>
           <entry key="HTML" value="11" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="459" />
+          <entry key="Python" value="631" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -116,11 +112,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1538560017879" expanded="true" signature="166:171" ph="..." />
+                <marker date="1538564406319" expanded="true" signature="166:171" ph="..." />
+                <marker date="1538564406319" expanded="true" signature="343:348" ph="..." />
               </folding>
             </state>
           </provider>
@@ -325,11 +322,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1538560017879" expanded="true" signature="166:171" ph="..." />
+            <marker date="1538564406319" expanded="true" signature="166:171" ph="..." />
+            <marker date="1538564406319" expanded="true" signature="343:348" ph="..." />
           </folding>
         </state>
       </provider>
