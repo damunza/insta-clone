@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f98d955-82a3-400b-8e5c-8b56734f4a43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="6f98d955-82a3-400b-8e5c-8b56734f4a43" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="5" />
+          <entry key="py" value="6" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -35,14 +33,14 @@
           <entry key="HTML" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="18" />
           <entry key="html" value="11" />
-          <entry key="py" value="631" />
+          <entry key="py" value="686" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -50,7 +48,7 @@
         <counts>
           <entry key="HTML" value="11" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="631" />
+          <entry key="Python" value="686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -109,18 +107,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="240">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1538564406319" expanded="true" signature="166:171" ph="..." />
-                <marker date="1538564406319" expanded="true" signature="343:348" ph="..." />
+                <marker date="1538564616834" expanded="true" signature="166:171" ph="..." />
+                <marker date="1538564616834" expanded="true" signature="343:348" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -230,7 +233,7 @@
     <frame x="67" y="27" width="814" height="872" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24905184" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24905184" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -242,7 +245,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.3293011" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3301887" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3301887" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -322,15 +325,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1538564406319" expanded="true" signature="166:171" ph="..." />
-            <marker date="1538564406319" expanded="true" signature="343:348" ph="..." />
+            <marker date="1538564616834" expanded="true" signature="166:171" ph="..." />
+            <marker date="1538564616834" expanded="true" signature="343:348" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
