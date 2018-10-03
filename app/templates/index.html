@@ -1,1 +1,14 @@
-<h1> Hi Dan </h1>
+{% extends 'base.html' %}
+
+{% block content %}
+{% for c in pic %}
+<div class="card">
+  <a href="" class="card-body">
+    <img src="{{c.image.url}}" alt="image">
+  </a>
+  <p>{{c.comments}}</p>
+</div>
+
+{% endfor %}
+
+{% endblock %}
