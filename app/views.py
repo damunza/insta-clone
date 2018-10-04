@@ -24,4 +24,5 @@ def profile(request,iden):
     function that returns individual profiles
     '''
     person = Profile.get_profile(identity=iden)
-    return render(request,'profile.html',{'human':person})
+    posts = Image.get_post(jina=iden)
+    return render(request,'profile.html',{'human':person,'posts':posts})

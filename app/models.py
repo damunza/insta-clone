@@ -37,3 +37,8 @@ class Image(models.Model):
     def get_image(cls,id):
         image = Image.objects.filter(id = id)
         return image
+
+    @classmethod
+    def get_post(cls,jina):
+        images = Image.objects.filter(profile__name__username__icontains = jina)
+        return images
