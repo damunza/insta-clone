@@ -7,7 +7,7 @@
     {% if title %}
       <title>{{title}}</title>
     {% else %}
-      <title>Gallery</title>
+      <title>Insta Replica</title>
     {% endif %}
 
     {% block styles %}
@@ -16,11 +16,11 @@
   </head>
   <body>
 
+    {% include 'navbar.html' %}
+
     {% block content %}
 
     {% endblock %}
-
-    {% include 'navbar.html' %}
 
     {% block scripts %}
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

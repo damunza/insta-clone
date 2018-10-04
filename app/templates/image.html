@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for c in item %}
+<div class="card">
+  <div class="card-body">
+    <img src="{{c.image.url}}" alt="image">
+  </div>
+  <div class="card-footer">
+    <p><b>{{c.image_name}}</b> {{c.image_caption}}</p>
+    <i>comments</i>
+    <ul>
+      <li>{{c.comments}}</li>
+    </ul>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

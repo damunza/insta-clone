@@ -15,3 +15,14 @@ class Image(models.Model):
     profile = models.ForeignKey(Profile)
     likes = models.IntegerField(default=0 )
     comments = HTMLField()
+
+    def __str__(self):
+        return self.image_name
+
+    def save_image(self):
+        self.save()
+
+    @classmethod
+    def get_image(cls,id):
+        image = Image.objects.filter(id = id)
+        return image
