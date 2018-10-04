@@ -8,6 +8,17 @@ class Profile(models.Model):
     profile_photo = models.ImageField(upload_to ='images/')
     bio = models.TextField()
 
+    def __str__(self):
+        return self.bio
+
+    def save_profile(self):
+        self.save()
+
+    @classmethod
+    def get_profile(cls,identity):
+        profile = Profile.objects.filter(name__username__icontains = identity)
+        return profile
+
 class Image(models.Model):
     image = models.ImageField(upload_to = 'images/')
     image_name = models.CharField(max_length = 60)

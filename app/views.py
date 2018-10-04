@@ -18,3 +18,10 @@ def image(request,pic_id):
     '''
     pic = Image.get_image(id=pic_id)
     return render(request,'image.html',{'item': pic})
+
+def profile(request,iden):
+    '''
+    function that returns individual profiles
+    '''
+    person = Profile.get_profile(identity=iden)
+    return render(request,'profile.html',{'human':person})
