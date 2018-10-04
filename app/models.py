@@ -31,7 +31,6 @@ class Like(models.Model):
 class Comment(models.Model):
     comments =models.CharField(max_length= 90,blank= True)
     post_by = models.ForeignKey(User, on_delete=models.CASCADE)
-    post_id = models.ForeignKey('app.Image', on_delete=models.CASCADE, related_name='posts')
 
     def __str__(self):
         return self.comments
