@@ -9,7 +9,8 @@ urlpatterns = [
     url(r'^profile/(\w+)',views.profile,name = 'profile'),
     url(r'^edit/profile$',views.new_profile,name ='edit_profile'),
     url(r'^new/comment$',views.comment,name = 'new_comment'),
-    url(r'new/image$',views.post,name='new_post')
+    url(r'new/image$',views.post,name='new_post'),
+    url(r'^search/',views.search,name = 'search'),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -11,9 +11,11 @@
   <div class="card-footer" style="border:hidden;">
     <p><b>{{c.profile.name}}</b> {{c.image_caption}}</p>
     <i>comments</i>
+    {% for m in c.comments %}
     <ul>
-      <li>{{c.comments.comments}}</li>
+      <li>{{m.comments}}</li>
     </ul>
+    {% endfor %}
   </div>
 </div>
 </div>

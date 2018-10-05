@@ -74,3 +74,17 @@ def post(request):
 
     return render(request, 'new_image.html', {"form": form})
 
+@login_required(login_url='/accounts/login/')
+def search(request):
+    '''
+    function that returns the search page and the searched items
+    '''
+    if 'name' in request.GET and request.GET['name']:
+        jina = request.GET.get('name')
+        profile = Profile.search_profile(jina)
+
+        title = 'Search'
+        return render(request,'search.html',{'title':title, 'content': profile})
+
+    else:
+        return render(request,'search.html')

@@ -9,7 +9,7 @@ class Profile(models.Model):
     bio = models.TextField()
 
     def __str__(self):
-        return self.bio
+        return self.name
 
     def save_profile(self):
         self.save()
@@ -41,6 +41,7 @@ class Like(models.Model):
 class Comment(models.Model):
     comments =models.CharField(max_length= 90,blank= True)
     post_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey('app.Image', on_delete=models.CASCADE, related_name='opinions')
 
     def __str__(self):
         return self.comments
