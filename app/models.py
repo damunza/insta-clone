@@ -19,6 +19,16 @@ class Profile(models.Model):
         profile = Profile.objects.filter(name__username__icontains = identity)
         return profile
 
+    @classmethod
+    def delete_profile(cls,id):
+        prof= Profile.objects.filter(id = id)
+        prof.delete()
+
+    @classmethod
+    def search_profile(cls,jina):
+        profile = Profile.objects.filter(name__username__icontains=jina)
+        return profile
+
 class Like(models.Model):
     likes = models.IntegerField()
 
@@ -61,3 +71,14 @@ class Image(models.Model):
     def get_post(cls,jina):
         images = Image.objects.filter(profile__name__username__icontains = jina)
         return images
+
+    @classmethod
+    def delete_image(cls,id):
+        image = Image.objects.filter(id = id)
+        image.delete()
+
+    @classmethod
+    def update_caption(cls,id,cap):
+        image = Image.objects.filter(id=id)
+        image.update(image_caption = cap)
+        return image
