@@ -9,7 +9,7 @@ class Profile(models.Model):
     bio = models.TextField()
 
     def __str__(self):
-        return self.name
+        return self.name.username
 
     def save_profile(self):
         self.save()
@@ -30,7 +30,7 @@ class Profile(models.Model):
         return profile
 
 class Like(models.Model):
-    likes = models.IntegerField()
+    likes = models.IntegerField(null = True)
 
     def __int__(self):
         return self.likes

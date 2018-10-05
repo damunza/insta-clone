@@ -62,10 +62,12 @@ def comment(request):
 
 @login_required(login_url='/accounts/login/')
 def post(request):
+    current_user = request.user
     if request.method == 'POST':
         form = NewImageForm(request.POST, request.FILES)
         if form.is_valid():
             image = form.save(commit=False)
+            image.profile = current_user
             image.save()
         return redirect('home')
 
