@@ -10,3 +10,8 @@ class NewCommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         exclude = ['post_by']
+
+class NewImageForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        exclude = ['comments']

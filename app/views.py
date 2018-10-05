@@ -59,3 +59,18 @@ def comment(request):
         form = NewCommentForm()
 
     return render(request, 'new_comment.html', {"form": form})
+
+@login_required(login_url='/accounts/login/')
+def post(request):
+    if request.method == 'POST':
+        form = NewImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.save(commit=False)
+            image.save()
+        return redirect('home')
+
+    else:
+        form = NewImageForm()
+
+    return render(request, 'new_image.html', {"form": form})
+
