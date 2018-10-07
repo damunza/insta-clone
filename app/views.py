@@ -47,18 +47,26 @@ def new_profile(request):
 @login_required(login_url='/accounts/login/')
 def comment(request):
     current_user = request.user
-    if request.method == 'POST':
-        form = NewCommentForm(request.POST, request.FILES)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post_by = current_user
-            comment.save()
-        return redirect('home')
+    # item = Image.get_image(id=id)
+    if 'id' in request.GET and request.GET['id']:
+        position = request.GET.get('id')
+        post = Image.get_image(id=position)
+        # post = item
+        if request.method == 'POST':
+            form = NewCommentForm(request.POST, request.FILES)
+            if form.is_valid():
+                comment = form.save(commit=False)
+                comment.post_by = current_user
+                comment.post = post
+                comment.save()
+            return redirect('home')
 
-    else:
-        form = NewCommentForm()
+        else:
+            form = NewCommentForm()
 
-    return render(request, 'new_comment.html', {"form": form})
+        return render(request,'new_comment.html',{"form": form})
+
+    return render(request, 'new_comment.html')
 
 @login_required(login_url='/accounts/login/')
 def post(request):

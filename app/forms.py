@@ -9,7 +9,7 @@ class EditProfileForm(forms.ModelForm):
 class NewCommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        exclude = ['post_by']
+        exclude = ['post_by','post']
 
 class NewImageForm(forms.ModelForm):
     class Meta:
