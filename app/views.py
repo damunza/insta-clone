@@ -96,6 +96,6 @@ def search(request):
 def like(request,operation,pk):
    image = get_object_or_404(Image,pk=pk)
    if operation == 'like':
-       image.likes += 1
+       image.likes.likes += 1
        image.save()
        return redirect('home')
