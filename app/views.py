@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -45,28 +45,23 @@ def new_profile(request):
     return render(request,'new_profile.html',{"form":form})
 
 @login_required(login_url='/accounts/login/')
-def comment(request):
+def comment(request,id):
     current_user = request.user
-    # item = Image.get_image(id=id)
-    if 'id' in request.GET and request.GET['id']:
-        position = request.GET.get('id')
-        post = Image.get_image(id=position)
-        # post = item
-        if request.method == 'POST':
-            form = NewCommentForm(request.POST, request.FILES)
-            if form.is_valid():
-                comment = form.save(commit=False)
-                comment.post_by = current_user
-                comment.post = post
-                comment.save()
-            return redirect('home')
+    image = Image.get_image(id=id)
+    item = get_object_or_404(Image, pk= id)
+    if request.method == 'POST':
+        form = NewCommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post_by = current_user
+            comment.post = item
+            comment.save()
+        return redirect('home')
 
-        else:
-            form = NewCommentForm()
+    else:
+        form = NewCommentForm()
 
-        return render(request,'new_comment.html',{"form": form})
-
-    return render(request, 'new_comment.html')
+    return render(request,'new_comment.html',{"form": form,"images":image})
 
 @login_required(login_url='/accounts/login/')
 def post(request):
@@ -96,3 +91,11 @@ def search(request):
 
     else:
         return render(request,'search.html')
+
+@login_required(login_url="/accounts/login/")
+def like(request,operation,pk):
+   image = get_object_or_404(Image,pk=pk)
+   if operation == 'like':
+       image.likes += 1
+       image.save()
+       return redirect('home')
